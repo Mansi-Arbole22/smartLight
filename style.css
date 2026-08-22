@@ -1,0 +1,145 @@
+body
+{
+ font-size:18px;
+ font-family: cursive;
+ color:black;
+ background-color: rgb(191, 240, 240);
+
+}/* Resetting default margin and padding */
+body, h1, h2, p{
+ margin: 0;
+ padding: 0;
+}
+header{
+ background-color:rgb(75, 110, 175);
+ text-align: center;
+ color:white;
+ /padding:10px;/
+}
+footer{
+ background-color:rgb(75, 110, 175);
+ text-align: center;
+ color:white;
+ padding: 5px;
+}
+body{
+ font-family:cursive;
+ font-weight:bold;
+ background-color: antiquewhite;
+ text-align: center;
+}
+ul{
+ padding:20px;
+}
+li{
+ display: inline;
+ margin-right:20px;
+}
+a{
+ text-decoration: none;
+ color: blueviolet;
+ font-size:16px;
+ font-weight: bold;
+}
+a:hover{
+ color: red;
+}
+.destinationPage{
+ display: flex;
+ justify-content: space-around;
+ flex-wrap: wrap;
+ margin-top:20px;
+}
+#EachDestination{
+ box-sizing:border-box;
+ box-align: center;
+ border-radius: 10px;
+ background-color: white;
+ width:30%;
+}
+#EachDestination img{
+ width:80%;
+ height:50%
+ border-radius: 10px;
+ margin-bottom:20px;
+}
+h2,h3{
+ color:
+}
+img{
+ width:300px;
+ height: 300px;
+ border-radius: 20px;
+}
+#images{
+ width:1200px;
+ border-radius: 30px;
+ background-color: white;
+ padding:20px;
+}
+#back{
+ background-color: thistle;
+ color: blue;
+ border-radius: 5px;
+ float:right;
+}
+#back:hover{
+ background-color: darkseagreen;
+ color:white;
+}
+/* #back a:hover{
+ color:white;
+} */
+@media screen and (max-width:1800px){
+ body{
+ background-color:darkgray;
+ }
+}
+@media screen and (max-width:1200px){
+ body{
+ background-color:gold
+ }
+}
+@media screen and (max-width:600px){
+ body{
+ background-color:burlywood;
+ }
+}
+header
+{
+ background-color: lightpink;
+ height: 80px; line-height: 3.5;
+ margin-top: -5px; margin-left: -5px; margin-right: -5px;
+ text-align: center;
+ font-family:sans-serif; font-size: 26; font-weight: bold;
+ border: 1px solid #73AD21;
+
+}
+footer
+{
+ background-color: lightpink;
+ margin-left: -5px; margin-right: -5px;
+ height: 40px; line-height: 2;
+ text-align: center;
+ font-family:sans-serif; font-size: 20; font-weight: bold;
+ border: 1px solid #73AD21;
+
+}
+button{
+ height: 30px;
+ width: 80px;
+ color: rgb(67, 37, 37);
+ border-radius: 5px;
+ background-size: 5px;
+
+}
+button:focus{
+ background-image:linear-gradient(to right, rgb(230, 45, 76), rgb(82, 164, 75), rgb(31, 190,
+243));
+ border-width: 2px;
+ color:white
+}
+#color_changer_blue {background-color: #3958e1;}
+#color_changer_red {background-color: #f44336;}
+#color_changer_green {background-color: #48af33;}
+#color_changer_off {background-color:grey;}
