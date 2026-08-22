@@ -31,19 +31,35 @@ $(document).ready(function(){
     change_led_color(color.val(), "0");
     });
     });
-    function change_led_color(color, power){
+  function change_led_color(color, power) {
     var settings = {
-    "url": "https://wizklub.com/api/secured/wiziot-poll-request/",
-    "method": "POST",
-    "dataType": "json",
-    "contentType": "application/json; charset=utf-8",
-    "headers": {"Api-Access-Key": "NFhxc0JCdnducXhtZTlURHBkVEg=", "Api-Secret-Key": "VnpJU19FeDhhUW5TY2lxa2xnNjRhZ1g0bGRvakhtLWVvdw==", "Content-Type": "application/json"},
-    
-    "data": JSON.stringify({"mode": "WRITE", "device_id": "mansi01_IoT_device", "source": "API",
-    "api": "smartlight", "type": "strip_switch", "color": color, "power": power}),
+        url: "https://wizklub.com/api/secured/wiziot-poll-request/",
+        method: "POST",
+        dataType: "json",
+        contentType: "application/json",
+        headers: {
+            "Api-Access-Key": "NFhxc0JCdnducXhtZTlURHBkVEg=",
+            "Api-Secret-Key": "VnpJU19FeDhhUW5TY2lxa2xnNjRhZ1g0bGRvakhtLWVvdw=="
+        },
+        data: JSON.stringify({
+            mode: "WRITE",
+            device_id: "mansi01_IoT_device",
+            source: "API",
+            api: "smartlight",
+            type: "strip_switch",
+            color: color,
+            power: power
+        })
     };
-    console.log(power, color);
-    $.ajax(settings).done(function (response) {
-    console.log(response);
-    });
-    }
+
+    console.log("Sending:", color, power);
+
+    $.ajax(settings)
+        .done(function(response) {
+            console.log("Response:", response);
+        })
+        .fail(function(xhr, status, error) {
+            console.log("Request failed:", status, error);
+            console.log("Response:", xhr.responseText);
+        });
+}
